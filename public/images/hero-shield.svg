@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E84848"/>
+      <stop offset="100%" stop-color="#A12020"/>
+    </linearGradient>
+    <linearGradient id="shieldInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1D22"/>
+      <stop offset="100%" stop-color="#0E0F12"/>
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#252730"/>
+      <stop offset="100%" stop-color="#15161A"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background glow -->
+  <circle cx="250" cy="250" r="200" fill="#D42B2B" opacity="0.04" filter="url(#bigGlow)"/>
+
+  <!-- Floating particles -->
+  <circle cx="100" cy="120" r="3" fill="#D42B2B" opacity="0.4">
+    <animate attributeName="cy" values="120;100;120" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="150" r="2" fill="#34D399" opacity="0.5">
+    <animate attributeName="cy" values="150;130;150" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="380" cy="380" r="2.5" fill="#60A5FA" opacity="0.4">
+    <animate attributeName="cy" values="380;360;380" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="130" cy="350" r="2" fill="#FBBF24" opacity="0.4">
+    <animate attributeName="cy" values="350;335;350" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Shield outer -->
+  <g filter="url(#glow)">
+    <path d="M250 60 L400 130 L400 280 C400 360 330 420 250 450 C170 420 100 360 100 280 L100 130 Z"
+      fill="url(#shieldGrad)" opacity="0.9"/>
+  </g>
+
+  <!-- Shield inner -->
+  <path d="M250 85 L380 145 L380 275 C380 345 318 398 250 425 C182 398 120 345 120 275 L120 145 Z"
+    fill="url(#shieldInner)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Phone frame -->
+  <rect x="195" y="150" width="110" height="200" rx="12" fill="url(#phoneGrad)"
+    stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+  <!-- Phone screen -->
+  <rect x="203" y="165" width="94" height="170" rx="6" fill="#0E0F12"/>
+
+  <!-- Phone screen content -->
+  <!-- Header bar -->
+  <rect x="210" y="172" width="80" height="6" rx="3" fill="#252730"/>
+  <circle cx="218" cy="175" r="3" fill="#D42B2B"/>
+
+  <!-- Verified payment card -->
+  <rect x="210" y="186" width="80" height="45" rx="5" fill="#15161A"
+    stroke="rgba(52,211,153,0.2)" stroke-width="0.8"/>
+  <circle cx="225" cy="200" r="7" fill="rgba(52,211,153,0.12)"/>
+  <path d="M222 200 L224.5 202.5 L228.5 197.5" stroke="#34D399" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <rect x="238" y="196" width="40" height="3" rx="1.5" fill="#34D399" opacity="0.7"/>
+  <rect x="238" y="203" width="28" height="2" rx="1" fill="#3A3A44"/>
+  <rect x="210" y="218" width="80" height="10" rx="4" fill="#1C1D22"/>
+  <rect x="214" y="220" width="52" height="6" rx="3" fill="#34D399" opacity="0.3"/>
+
+  <!-- Fraud alert card -->
+  <rect x="210" y="240" width="80" height="38" rx="5" fill="#15161A"
+    stroke="rgba(248,113,113,0.2)" stroke-width="0.8"/>
+  <circle cx="225" cy="252" r="7" fill="rgba(248,113,113,0.12)"/>
+  <path d="M225 249 L225 253" stroke="#F87171" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="225" cy="256" r="0.8" fill="#F87171"/>
+  <rect x="238" y="249" width="40" height="3" rx="1.5" fill="#F87171" opacity="0.7"/>
+  <rect x="238" y="255" width="32" height="2" rx="1" fill="#3A3A44"/>
+  <rect x="210" y="268" width="36" height="7" rx="3.5" fill="rgba(248,113,113,0.12)"/>
+  <text x="214" y="274" fill="#F87171" font-size="5" font-family="sans-serif" font-weight="600">FRAUDE</text>
+
+  <!-- Pending card -->
+  <rect x="210" y="286" width="80" height="32" rx="5" fill="#15161A"
+    stroke="rgba(251,191,36,0.15)" stroke-width="0.8"/>
+  <circle cx="225" cy="298" r="7" fill="rgba(251,191,36,0.12)"/>
+  <circle cx="225" cy="298" r="4" fill="none" stroke="#FBBF24" stroke-width="1"/>
+  <path d="M225 295 L225 298 L227 299" stroke="#FBBF24" stroke-width="0.8" stroke-linecap="round" fill="none"/>
+  <rect x="238" y="295" width="40" height="3" rx="1.5" fill="#FBBF24" opacity="0.5"/>
+  <rect x="238" y="301" width="25" height="2" rx="1" fill="#3A3A44"/>
+
+  <!-- Checkmark glow (top right of shield) -->
+  <g filter="url(#glow)">
+    <circle cx="340" cy="160" r="18" fill="#34D399"/>
+    <path d="M332 160 L337 165 L348 154" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Lock icon (bottom left) -->
+  <g filter="url(#glow)" opacity="0.8">
+    <circle cx="155" cy="340" r="14" fill="#60A5FA"/>
+    <rect x="149" y="339" width="12" height="9" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path d="M152 339 L152 336 C152 333 155 331 158 333 L158 339" fill="none" stroke="#fff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Bell icon (top left) -->
+  <g filter="url(#glow)" opacity="0.7">
+    <circle cx="155" cy="160" r="12" fill="#FBBF24"/>
+    <path d="M152 162 C152 158 154 155 155 155 C156 155 158 158 158 162 L152 162 Z" fill="#fff" opacity="0.9"/>
+    <rect x="153.5" y="162" width="3" height="1" rx="0.5" fill="#fff" opacity="0.9"/>
+  </g>
+
+  <!-- Chart icon (bottom right) -->
+  <g filter="url(#glow)" opacity="0.7">
+    <circle cx="345" cy="340" r="13" fill="#D42B2B"/>
+    <rect x="339" y="342" width="3" height="6" rx="1" fill="#fff" opacity="0.9"/>
+    <rect x="344" y="338" width="3" height="10" rx="1" fill="#fff" opacity="0.9"/>
+    <rect x="349" y="335" width="3" height="13" rx="1" fill="#fff" opacity="0.9"/>
+  </g>
+</svg>

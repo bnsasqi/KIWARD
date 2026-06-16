@@ -1,0 +1,87 @@
+:root {
+  /* === Brand: Peru Security — Black, Silver, Red, White === */
+  --kw-red: #D42B2B;
+  --kw-red-light: #F04848;
+  --kw-red-dark: #A12020;
+  --kw-red-glow: rgba(212, 43, 43, 0.3);
+  --kw-red-rgb: 212, 43, 43;
+
+  --kw-silver: #B8B8B8;
+  --kw-silver-light: #D4D4D4;
+  --kw-silver-dark: #8A8A8A;
+
+  /* === Surfaces — layered depth system === */
+  --kw-bg-0: #060608;
+  --kw-bg-1: #0E0F12;
+  --kw-bg-2: #15161A;
+  --kw-bg-3: #1C1D22;
+  --kw-bg-4: #252730;
+  --kw-bg-5: #2F3140;
+
+  /* === Cards with depth and subtle gradient === */
+  --kw-card-bg: linear-gradient(145deg, rgba(22,23,28,0.95), rgba(16,17,21,0.9));
+  --kw-card-flat: rgba(22,23,28,0.95);
+  --kw-card-border: rgba(255, 255, 255, 0.05);
+  --kw-card-border-hover: rgba(255, 255, 255, 0.1);
+  --kw-card-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.03);
+  --kw-card-shadow-lg: 0 4px 16px rgba(0,0,0,0.4), 0 16px 48px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+  --kw-card-shadow-hover: 0 8px 24px rgba(0,0,0,0.45), 0 20px 56px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+
+  /* === Text with better contrast === */
+  --kw-text-1: #F5F5F7;
+  --kw-text-2: #C5C5CA;
+  --kw-text-3: #8E8E96;
+  --kw-text-4: #5C5C66;
+  --kw-text-5: #3A3A44;
+
+  /* === Semantic with glow === */
+  --kw-success: #34D399;
+  --kw-success-bg: rgba(52, 211, 153, 0.08);
+  --kw-success-border: rgba(52, 211, 153, 0.2);
+  --kw-success-glow: 0 0 24px rgba(52, 211, 153, 0.15);
+
+  --kw-danger: #F87171;
+  --kw-danger-bg: rgba(248, 113, 113, 0.08);
+  --kw-danger-border: rgba(248, 113, 113, 0.2);
+  --kw-danger-glow: 0 0 24px rgba(248, 113, 113, 0.15);
+
+  --kw-warning: #FBBF24;
+  --kw-warning-bg: rgba(251, 191, 36, 0.08);
+  --kw-warning-border: rgba(251, 191, 36, 0.2);
+
+  --kw-info: #60A5FA;
+  --kw-info-bg: rgba(96, 165, 250, 0.08);
+  --kw-info-border: rgba(96, 165, 250, 0.2);
+
+  /* === Payment brands === */
+  --kw-yape: #742D8B;
+  --kw-plin: #00B89C;
+  --kw-bipay: #E85D2A;
+
+  /* === Typography === */
+  --kw-font: 'Inter', system-ui, -apple-system, sans-serif;
+  --kw-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* === Radius === */
+  --kw-r-sm: 6px;
+  --kw-r-md: 10px;
+  --kw-r-lg: 14px;
+  --kw-r-xl: 20px;
+  --kw-r-full: 9999px;
+
+  /* === Motion === */
+  --kw-ease: 200ms ease;
+  --kw-ease-slow: 400ms ease;
+
+  /* === Layout === */
+  --kw-sidebar-w: 260px;
+  --kw-header-h: 60px;
+  --kw-max-w: 1320px;
+
+  /* === Z-Index === */
+  --kw-z-dropdown: 100;
+  --kw-z-sticky: 200;
+  --kw-z-overlay: 300;
+  --kw-z-modal: 400;
+  --kw-z-toast: 500;
+}

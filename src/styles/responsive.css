@@ -1,0 +1,136 @@
+/* ============ Tablet (max 1024px) ============ */
+@media (max-width: 1024px) {
+  .dash-grid { grid-template-columns: 1fr }
+  .stats-grid { grid-template-columns: repeat(2, 1fr) }
+  .features-grid { grid-template-columns: repeat(2, 1fr) }
+  .pricing-grid { grid-template-columns: 1fr }
+  .pricing-card.featured { transform: none }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px }
+  .settings-grid { grid-template-columns: 1fr }
+  .settings-form-group { grid-template-columns: 1fr }
+  .hero { flex-direction: column; text-align: center; padding-top: 120px; padding-bottom: 60px; min-height: auto }
+  .hero-content { max-width: 100% }
+  .hero-actions { justify-content: center }
+  .hero-stats { justify-content: center }
+  .hero-visual { position: static; transform: none; max-width: 320px; width: 100%; margin: 48px auto 0; animation: none }
+  .demo-flow { flex-direction: column; gap: 12px }
+  .demo-arrow { transform: rotate(90deg) }
+  .demo-card { width: 280px }
+  .verify-grid { grid-template-columns: 1fr }
+  .trust-stats { gap: 32px }
+}
+
+/* ============ Mobile (max 768px) ============ */
+@media (max-width: 768px) {
+  :root { --kw-sidebar-w: 0px }
+
+  /* Sidebar */
+  .sidebar { transform: translateX(-100%); position: fixed; z-index: var(--kw-z-overlay); width: 280px }
+  .sidebar.open { transform: translateX(0) }
+  .sidebar-overlay { display: block }
+
+  /* Dashboard layout */
+  .dash-content { margin-left: 0 }
+  .header { left: 0; padding-left: 16px }
+  .header-menu-btn { display: flex }
+  .dash-main { padding: 16px; padding-top: calc(var(--kw-header-h) + 16px) }
+
+  /* Landing nav */
+  .landing-nav-links { display: none }
+  .landing-nav-mobile { display: flex }
+  .landing-nav { padding: 0 16px }
+
+  /* Hero */
+  .hero { padding: 100px 20px 48px }
+  .hero-title { font-size: 28px }
+  .hero-subtitle { font-size: 14px }
+  .hero-stats { gap: 20px; flex-wrap: wrap; justify-content: center }
+  .hero-stat-value { font-size: 24px }
+  .hero-visual { max-width: 260px }
+  .hero-badge { font-size: 12px; padding: 6px 14px }
+
+  /* Sections */
+  .section { padding: 60px 20px }
+  .section-title { font-size: 24px }
+  .section-subtitle { font-size: 14px }
+  .features-grid { grid-template-columns: 1fr }
+  .feature-card { padding: 24px }
+  .steps-grid { grid-template-columns: 1fr; gap: 24px }
+  .steps-grid::before { display: none }
+  .pricing-grid { grid-template-columns: 1fr }
+
+  /* Compat bar */
+  .compat-items { gap: 12px }
+  .compat-item { padding: 8px 14px }
+
+  /* Trust section */
+  .trust-stats { gap: 24px }
+  .trust-stat-value { font-size: 26px }
+
+  /* CTA */
+  .cta-section { padding: 48px 20px; margin: 0 16px 32px; border-radius: var(--kw-r-lg) }
+  .cta-title { font-size: 22px }
+
+  /* Footer */
+  .footer { padding: 40px 20px 24px }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center }
+
+  /* Auth */
+  .auth-card { padding: 24px }
+
+  /* Table */
+  .table th, .table td { padding: 10px 12px; font-size: 12px }
+
+  /* Alerts */
+  .alert-card { flex-direction: column; gap: 10px }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px }
+  .stat-value { font-size: 24px }
+  .stat-card-icon { width: 36px; height: 36px; font-size: 14px }
+
+  /* Cards */
+  .card { padding: 18px }
+  .card-header { margin-bottom: 14px; padding-bottom: 12px }
+
+  /* Notif panel */
+  .notif-panel { width: 100% }
+}
+
+/* ============ Small Mobile (max 480px) ============ */
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; gap: 10px }
+  .dash-main { padding: 12px; padding-top: calc(var(--kw-header-h) + 12px) }
+  .card { padding: 16px }
+  .hero-title { font-size: 24px }
+  .hero-actions { flex-direction: column; width: 100% }
+  .hero-actions .btn { width: 100%; justify-content: center }
+  .hero-stats { flex-direction: column; gap: 16px }
+  .hero-visual { max-width: 200px }
+  .btn-lg { padding: 12px 20px; font-size: 14px }
+  .pricing-card { padding: 24px }
+  .section-header { margin-bottom: 32px }
+  .step-number { width: 48px; height: 48px; font-size: 18px }
+  .compat-items { flex-direction: column; gap: 10px }
+  .trust-stats { flex-direction: column; gap: 16px }
+  .demo-card { width: 100% }
+  .filter-bar { flex-direction: column }
+  .filter-bar .input, .filter-bar .select { max-width: 100% }
+  .page-header { flex-direction: column; align-items: flex-start }
+  .page-actions { width: 100% }
+  .page-actions .btn { flex: 1 }
+  .header-status span { display: none }
+}
+
+/* ============ Large Desktop (min 1200px) ============ */
+@media (min-width: 1200px) {
+  .stats-grid { grid-template-columns: repeat(4, 1fr) }
+}
+
+/* ============ Extra Large (min 1440px) ============ */
+@media (min-width: 1440px) {
+  .section { max-width: 1320px }
+  .hero-content { max-width: 650px }
+  .hero-title { font-size: 64px }
+}
